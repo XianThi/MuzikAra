@@ -65,8 +65,8 @@ code .str,pre .str{color:#65B042}code .kwd,pre .kwd{color:#E28964}code .com,pre 
 							<div class="panel-title panel-heading">
 							<ul style="margin-bottom:0">
 								<li>"<b>GET / ?q=</b>" : for search with string</li>
-								<li>"<b>GET / ?link=</b>" : for search next page</li>
-								<li>"<b>GET / ?url=</b>" : for download selected</li>
+								<li>"<b>GET / ?url=</b>" : for search next page</li>
+								<li>"<b>GET / ?link=</b>" : for download selected</li>
 							</ul>
 						</div>
 						<div id="q">
@@ -83,24 +83,24 @@ code .str,pre .str{color:#65B042}code .kwd,pre .kwd{color:#E28964}code .com,pre 
 		"{title}"
         ],
         "link": [
-		"{base64_decode(link)}"	//<a href="#url">for ?url= </a>
+		"{base64_decode(link)}"	//<a href="#link">for ?link= </a>
         ]
     },
     "next_link": [
-	"{next_link}"	//<a href="#link">for ?link= </a>
+	"{next_link}"	//<a href="#url">for ?url= </a>
     ]
 }</code></pre></div>
 <div id="link">
 						<hr>
 												<h4 class="panel-title panel-heading">Get list with next page link:</h4>
-						<pre class="prettyprint lang-html prettyprinted" style=""><span class="pln">http://yourserver/?link=</span><b><span class="nocode" style="color:#65b042">{next_link}</span></b></pre>
-						<h4 class="panel-title panel-heading"><a href="#link"><code><b>?link=</b></code></a> return like <a href="#q"><code><b>?q=</b></code></a></h4>
+						<pre class="prettyprint lang-html prettyprinted" style=""><span class="pln">http://yourserver/?url=</span><b><span class="nocode" style="color:#65b042">{next_link}</span></b></pre>
+						<h4 class="panel-title panel-heading"><a href="#url"><code><b>?url=</b></code></a> return like <a href="#q"><code><b>?q=</b></code></a></h4>
 						</div>
 <div id="url">
 						<hr>
 						<h4 class="panel-title panel-heading">Get selected mp3 link:</h4>
-						<pre class="prettyprint lang-html prettyprinted" style=""><span class="pln">http://yourserver/?url=</span><b><span class="nocode" style="color:#65b042">{link}</span></b></pre>
-						<h4 class="panel-title panel-heading"><a href="#url"><code><b>?url=</b></code></a> return like this:</h4>
+						<pre class="prettyprint lang-html prettyprinted" style=""><span class="pln">http://yourserver/?link=</span><b><span class="nocode" style="color:#65b042">{link}</span></b></pre>
+						<h4 class="panel-title panel-heading"><a href="#link"><code><b>?link=</b></code></a> return like this:</h4>
 						<pre><code class="JSON"></code>{
     "link": [
         "mp3link"
